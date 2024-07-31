@@ -1,7 +1,15 @@
 import { defineStore } from 'pinia'
 
+const getNewTask = () => ({
+  title: '',
+  description: ''
+})
+
 export const useTaskStore = defineStore('task', {
   state: () => ({
+    showTaskForm: false,
+    listSelected: 0,
+    newTask: getNewTask(),
     todoList: [
       { title: 'Setup Project', description: 'Initialize the project repository and setup the project structure' },
       { title: 'Design Mockups', description: 'Create design mockups for the main pages' },
@@ -27,5 +35,17 @@ export const useTaskStore = defineStore('task', {
     ]
   }),
   getters: {},
-  actions: {}
+  actions: {
+    closeForm() {
+      this.showTaskForm = false
+      this.newTask = getNewTask()
+    },
+    addTask() {
+      let list = this.todoList
+      if (this.listSelected === 2) list = this.doingList
+      if (this.listSelected === 3) list = this.doneList
+      list.push(this.newTask)
+      this.closeForm()
+    }
+  }
 })

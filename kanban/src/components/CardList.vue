@@ -8,14 +8,28 @@ q-card.list
         card-task(:task="task")
   q-card-section
     .flex
-      q-btn.bg-primary.text-white(no-caps label="Add Task" icon="add")
+      q-btn.bg-primary.text-white(
+        no-caps
+        label="Add Task"
+        icon="add"
+        @click="openForm"
+      )
 </template>
 
 <script setup>
+import { useTaskStore } from 'src/stores/task'
 import CardTask from 'src/components/CardTask'
 
+const taskStore = useTaskStore()
+
 const props = defineProps({
+  id: Number,
   title: String,
   tasks: Array
 })
+
+const openForm = () => {
+  taskStore.listSelected = props.id
+  taskStore.showTaskForm = true
+}
 </script>
