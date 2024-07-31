@@ -1,1 +1,34 @@
-// app global css in Sass form
+ul
+  list-style-type: none
+  padding: 0px
+
+#board
+  width: 100%
+  display: flex
+  .list
+    flex: 1
+    max-width: 250px
+    margin-right: 50px
+    height: calc(100vh - 100px)
+    background-color: $secondary
+    .q-card__section
+      padding-bottom: 0px
+      &:first-child
+        label
+          font-weight: bold
+          color: $white
+      ul
+        padding: 5px
+        height: calc(100vh - 230px)
+        overflow-y: auto
+      &:last-child
+        padding-top: 0px
+        .q-btn
+          flex: 1
+    .task
+      margin-bottom: 10px
+      .q-card__section
+        &:first-child
+          padding-bottom: 10px
+          label
+            color: $dark
