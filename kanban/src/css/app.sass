@@ -50,7 +50,7 @@ ul
         &:first-child
           padding-bottom: 0
           label
-            color: $dark
+            color: darken($color-1, 20)
             font-size: 12px
         &:nth-child(2)
           padding-top: 0
@@ -61,11 +61,15 @@ ul
   background-color: $color-2
   .q-card__section > ul
     background-color: darken($color-2, 10)
+  .task > .q-card__section:first-child > label
+    color: darken($color-2, 20)
 
 #board > .list:nth-child(3n)
   background-color: $color-3
   .q-card__section > ul
     background-color: darken($color-3, 10)
+  .task > .q-card__section:first-child > label
+    color: darken($color-3, 20)
 
 #new-form
   width: 400px
