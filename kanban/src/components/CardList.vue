@@ -4,7 +4,14 @@ q-card.list
     label="{{ props.title }}"
   q-card-section
     ul
-      li(v-for="task in props.tasks")
+      li(
+        v-for="task in props.tasks"
+        :class="{ 'considering-dropping': task.isDroping }"
+        @dragover.prevent="() => dragOver(task)"
+        @dragenter.prevent="() => dragEnter(task)"
+        @dragleave="() => dragLeave(task)"
+        @drop="() => drop(task)"
+      )
         card-task(:task="task")
   q-card-section
     .flex
@@ -27,6 +34,11 @@ const props = defineProps({
   title: String,
   tasks: Array
 })
+
+const dragOver = task => task.isDroping = true
+const dragEnter = task => task.isDroping = true
+const dragLeave = task => task.isDroping = false
+const drop = task => taskStore.moveTask(task.id)
 
 const openForm = () => {
   taskStore.listSelected = props.id

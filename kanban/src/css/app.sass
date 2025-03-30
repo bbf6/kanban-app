@@ -36,13 +36,19 @@ ul
         height: calc(100vh - 290px)
         overflow-y: auto
         background-color: darken($color-1, 10)
+        li.considering-dropping
+          border-top: 2px solid $highlight
+          .task
+            pointer-events: none
       &:nth-child(2)
         padding-top: 0
       &:last-child
         padding-top: 0px
         .q-btn
           flex: 1
+
     .task
+      cursor: grab
       margin-bottom: 10px
       .q-card__section
         padding: 8px
