@@ -1,8 +1,10 @@
 <template lang="pug">
-q-page#board.q-pa-xl
-  card-list(title="to do" :tasks="taskStore.todoList"  :id="1")
-  card-list(title="doing" :tasks="taskStore.doingList" :id="2")
-  card-list(title="done"  :tasks="taskStore.doneList"  :id="3")
+q-page.q-pa-xl(bg-color="bg-color")
+  label.title="Kanban"
+  #board
+    card-list(title="To do" :tasks="taskStore.todoList"  :id="1")
+    card-list(title="Doing" :tasks="taskStore.doingList" :id="2")
+    card-list(title="Done"  :tasks="taskStore.doneList"  :id="3")
   q-dialog(v-model="taskStore.showTaskForm")
     task-form
 </template>
