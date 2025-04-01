@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  color: one
+  board: one
+  active: false
+
+two:
+  title: MyString
+  color: two
+  board: two
+  active: false
