@@ -4,7 +4,7 @@ class CreateLists < ActiveRecord::Migration[8.0]
       t.string :title, null: false, limit: 100
       t.references :color, null: false, foreign_key: true
       t.references :board, null: false, foreign_key: true
-      t.boolean :active
+      t.boolean :active, null: false, default: true
 
       t.timestamps
     end

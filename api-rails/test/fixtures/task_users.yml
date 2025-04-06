@@ -3,13 +3,7 @@
 one:
   task: one
   user: one
-  can_move: false
-  can_edit: false
-  can_delete: false
 
 two:
   task: two
   user: two
-  can_move: false
-  can_edit: false
-  can_delete: false

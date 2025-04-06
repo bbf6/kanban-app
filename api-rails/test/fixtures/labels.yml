@@ -9,3 +9,8 @@ two:
   name: MyString
   color: two
   board: two
+
+no_related_label:
+  name: Never used
+  color: one
+  board: one

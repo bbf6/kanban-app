@@ -4,10 +4,10 @@ one:
   title: MyString
   color: one
   board: one
-  active: false
+  active: true
 
 two:
   title: MyString
   color: two
   board: two
-  active: false
+  active: true
