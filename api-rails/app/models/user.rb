@@ -17,5 +17,5 @@ class User < ApplicationRecord
 
   validates :name, presence: true
   validates :email, presence: true, format: { with: EMAIL_REGEX, message: 'you have an invalid email' }
-  validates :password, length: { minimum: 10 }, format: { with: PASSWORD_REGEX, message: 'your password must have at least 1 letter, 1 uppercase and 1 digit' }
+  validates :password, allow_nil: true, length: { minimum: 10 }, format: { with: PASSWORD_REGEX, message: 'your password must have at least 1 letter, 1 uppercase and 1 digit' }
 end

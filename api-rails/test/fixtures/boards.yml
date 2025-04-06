@@ -9,3 +9,12 @@ two:
   name: MyString
   background: two
   company: two
+
+team1:
+  name: 'Team #1 board'
+  background: one
+  company: one
+
+background_less_board:
+  name: 'Its a regular borad, but it has no background'
+  company: one

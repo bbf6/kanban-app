@@ -90,4 +90,10 @@ class UserTest < ActiveSupport::TestCase
     user = User.new @incomplete_user_data
     assert_not user.valid?
   end
+
+  test 'can destroy a user without caring for their related records' do
+    assert_difference 'User.count', -1 do
+      users(:alice).destroy
+    end
+  end
 end
