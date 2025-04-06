@@ -1,21 +1,10 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  name: MyString
-  last_name: MyString
-  nickname: MyString
-  email: MyString
-  password_digest: MyString
-  admin: false
-  company: one
-  active: true
-
-two:
-  name: MyString
-  last_name: MyString
-  nickname: MyString
-  email: MyString
-  password_digest: MyString
+alice:
+  name: 'Alice'
+  last_name: 'Bell'
+  nickname: 'alice'
+  email: 'alice@mail.com'
+  password_digest: '$2a$12$AQACabTeqIG5eU7NSrwk1.gIz/eOl.wrcYgomTpKEr.Pjo9EnaLxu'
   admin: false
   company: one
   active: true

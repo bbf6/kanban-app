@@ -2,8 +2,8 @@
 
 one:
   task: one
-  user: one
+  user: alice
 
 two:
   task: two
-  user: two
+  user: alice

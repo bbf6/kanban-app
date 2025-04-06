@@ -2,8 +2,8 @@
 
 one:
   board: one
-  user: one
+  user: alice
 
 two:
   board: two
-  user: two
+  user: alice
