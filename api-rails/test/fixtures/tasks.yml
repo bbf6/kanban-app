@@ -3,17 +3,17 @@
 one:
   title: MyString
   description: MyString
-  content: MyString
   estimate_date: 2025-03-31 21:02:52
   limit_date: 2025-03-31 21:02:52
   list: todo
+  index: 0
   active: false
 
 two:
   title: MyString
   description: MyString
-  content: MyString
   estimate_date: 2025-03-31 21:02:52
   limit_date: 2025-03-31 21:02:52
   list: todo
+  index: 1
   active: false

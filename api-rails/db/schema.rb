@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_04_01_041304) do
+ActiveRecord::Schema[8.0].define(version: 2025_04_07_044245) do
+  create_table "action_text_rich_texts", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "body"
+    t.string "record_type", null: false
+    t.bigint "record_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["record_type", "record_id", "name"], name: "index_action_text_rich_texts_uniqueness", unique: true
+  end
+
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -159,11 +169,11 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_01_041304) do
 
   create_table "tasks", force: :cascade do |t|
     t.string "title", limit: 300, null: false
-    t.string "description", limit: 1000, null: false
-    t.string "content", limit: 30000, null: false
+    t.string "description", limit: 500, null: false
     t.datetime "estimate_date"
     t.datetime "limit_date"
     t.integer "list_id", null: false
+    t.integer "index", null: false
     t.boolean "active", default: true, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
