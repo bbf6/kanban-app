@@ -1,7 +1,7 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  list: one
+  list: todo
   user: alice
   can_move_in: false
   can_move_out: false
@@ -10,7 +10,7 @@ one:
   can_delete: false
 
 two:
-  list: two
+  list: doing
   user: alice
   can_move_in: false
   can_move_out: false

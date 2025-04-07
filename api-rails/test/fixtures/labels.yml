@@ -2,15 +2,15 @@
 
 one:
   name: MyString
-  color: one
+  color: red
   board: one
 
 two:
   name: MyString
-  color: two
+  color: blue
   board: two
 
 no_related_label:
   name: Never used
-  color: one
+  color: red
   board: one

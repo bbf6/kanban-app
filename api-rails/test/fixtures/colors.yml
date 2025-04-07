@@ -1,7 +1,10 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  hex: MyString
+green:
+  hex: 00ff00
 
-two:
-  hex: MyString
+red:
+  hex: ff0000
+
+blue:
+  hex: 0000ff

@@ -1,13 +1,15 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  color: one
+todo:
+  title: 'To do'
+  color: blue
   board: one
+  index: 0
   active: true
 
-two:
-  title: MyString
-  color: two
-  board: two
+doing:
+  title: 'Doing'
+  color: green
+  board: one
+  index: 1
   active: true

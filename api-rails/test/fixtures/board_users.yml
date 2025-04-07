@@ -7,3 +7,7 @@ one:
 two:
   board: two
   user: alice
+
+bob_in_team1:
+  board: one
+  user: user_working_on_team1

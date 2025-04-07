@@ -6,7 +6,7 @@ one:
   content: MyString
   estimate_date: 2025-03-31 21:02:52
   limit_date: 2025-03-31 21:02:52
-  list: one
+  list: todo
   active: false
 
 two:
@@ -15,5 +15,5 @@ two:
   content: MyString
   estimate_date: 2025-03-31 21:02:52
   limit_date: 2025-03-31 21:02:52
-  list: two
+  list: todo
   active: false

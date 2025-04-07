@@ -8,3 +8,13 @@ alice:
   admin: false
   company: one
   active: true
+
+user_working_on_team1:
+  name: 'Bob'
+  last_name: 'Collin'
+  nickname: 'boby'
+  email: 'bob@mail.com'
+  password_digest: '$2a$12$AQACabTeqIG5eU7NSrwk1.gIz/eOl.wrcYgomTpKEr.Pjo9EnaLxu'
+  admin: false
+  company: one
+  active: true

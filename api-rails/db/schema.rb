@@ -70,8 +70,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_01_041304) do
 
   create_table "colors", force: :cascade do |t|
     t.string "hex", limit: 6, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "companies", force: :cascade do |t|
@@ -131,9 +129,10 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_01_041304) do
 
   create_table "lists", force: :cascade do |t|
     t.string "title", limit: 100, null: false
+    t.integer "index", null: false
     t.integer "color_id", null: false
     t.integer "board_id", null: false
-    t.boolean "active"
+    t.boolean "active", default: true, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["board_id"], name: "index_lists_on_board_id"

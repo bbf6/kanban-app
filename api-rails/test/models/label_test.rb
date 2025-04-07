@@ -3,7 +3,7 @@ require "test_helper"
 class LabelTest < ActiveSupport::TestCase
   def setup
     @board = boards(:one)
-    @color = colors(:one)
+    @color = colors(:blue)
   end
 
   test 'can create a new label' do
