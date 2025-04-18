@@ -16,6 +16,6 @@ class User < ApplicationRecord
   has_secure_password
 
   validates :name, presence: true
-  validates :email, presence: true, format: { with: EMAIL_REGEX, message: 'you have an invalid email' }
+  validates :email, presence: true, uniqueness: true, format: { with: EMAIL_REGEX, message: 'you have an invalid email' }
   validates :password, allow_nil: true, length: { minimum: 10 }, format: { with: PASSWORD_REGEX, message: 'your password must have at least 1 letter, 1 uppercase and 1 digit' }
 end

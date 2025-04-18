@@ -80,7 +80,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'cannot create a user without a valid password confirmation' do
-    @incomplete_user_data[:password_confirmation] = 'superpa55wordSecret2'
+    @incomplete_user_data[:password_confirmation] = PASSWORD.reverse
     user = User.new @incomplete_user_data
     assert_not user.valid?
   end
@@ -95,5 +95,13 @@ class UserTest < ActiveSupport::TestCase
     assert_difference 'User.count', -1 do
       users(:alice).destroy
     end
+  end
+
+  test 'cannot create a user with an existing password' do
+    user = User.new @full_user_data
+    assert user.valid?
+    assert user.save!
+    user2 = User.new @full_user_data
+    assert_not user2.valid?
   end
 end

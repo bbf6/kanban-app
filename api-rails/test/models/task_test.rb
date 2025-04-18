@@ -63,7 +63,7 @@ class TaskTest < ActiveSupport::TestCase
   test 'can destroy a task' do
     task = tasks(:one)
     assert_difference 'Task.count', -1 do
-      task.destroy!
+      task.destroy
     end
   end
 end
