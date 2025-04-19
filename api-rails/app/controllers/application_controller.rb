@@ -12,10 +12,15 @@ class ApplicationController < ActionController::Base
     render json: { message: 'You need to log in' }, status: :unauthorized
   end
 
+  def not_found
+    head :not_found
+  end
+
   private
 
   def current_user
     token = decode
+    return false unless token
     user_id = token[0]['user_id']
     @current_user = User.find user_id
   end

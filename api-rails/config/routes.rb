@@ -14,5 +14,6 @@ Rails.application.routes.draw do
 
   scope :api do
     post 'auth/login' => 'auth#login'
+    resources :boards
   end
 end

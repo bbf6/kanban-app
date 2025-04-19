@@ -16,6 +16,6 @@ module JwtEncrypt
   SECRET_KEY = ENV['JWT_SECRET_KEY']
 
   def header
-    request.header['Authorization']
+    request.headers['Authorization']
   end
 end
