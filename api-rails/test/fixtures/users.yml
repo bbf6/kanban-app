@@ -4,7 +4,8 @@ alice:
   last_name: 'Bell'
   nickname: 'alice'
   email: 'alice@mail.com'
-  password_digest: '$2a$12$AQACabTeqIG5eU7NSrwk1.gIz/eOl.wrcYgomTpKEr.Pjo9EnaLxu'
+  # password: 'superpa55wordSecret'
+  password_digest: '$2a$12$giU9IUtE8t6GJ72f27a8z.LPXWWC74tqW9AoP.FH/sR75rDJsLEOW'
   admin: false
   company: one
   active: true
@@ -14,7 +15,8 @@ user_working_on_team1:
   last_name: 'Collin'
   nickname: 'boby'
   email: 'bob@mail.com'
-  password_digest: '$2a$12$AQACabTeqIG5eU7NSrwk1.gIz/eOl.wrcYgomTpKEr.Pjo9EnaLxu'
+  # password: 'superpa55wordSecret'
+  password_digest: '$2a$12$giU9IUtE8t6GJ72f27a8z.LPXWWC74tqW9AoP.FH/sR75rDJsLEOW'
   admin: false
   company: one
   active: true

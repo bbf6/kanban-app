@@ -1,8 +1,6 @@
 require "test_helper"
 
 class UserTest < ActiveSupport::TestCase
-  PASSWORD = 'superpa55wordSecret'
-
   def setup()
     @company = companies(:one)
     @incomplete_user_data = {
